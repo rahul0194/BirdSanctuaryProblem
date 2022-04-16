@@ -1,52 +1,32 @@
 package com.bridgelabz.birdsanctuaryproblem;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class BirdRepository {
-	private List birdList = new ArrayList();
+	// private List<Bird> birdList = new ArrayList();
+	private Set<Bird> birdList = new HashSet<Bird>();
 
-	List getBirdList() {
+	Set getBirdList() {
 		return birdList;
 	}
 
-	void addBirds(Duck duck) {
-		birdList.add(duck);
+	void addBirds(Bird bird) {
+		birdList.add(bird);
 	}
 
-	void addBirds(Penguine penguine) {
-		birdList.add(penguine);
+	void removeBirds(Bird bird) {
+		birdList.remove(bird);
 	}
 
-	void addBirds(Ostrich ostrich) {
-		birdList.add(ostrich);
-	}
-
-	void addBirds(Flemingo flemingo) {
-		birdList.add(flemingo);
-	}
-
-	void addBirds(Parrot parrot) {
-		birdList.add(parrot);
-	}
-
-	void removeBirds(Duck duck) {	
-		birdList.remove(duck);
-	}
-
-	void removeBirds(Penguine penguine) {
-		birdList.remove(penguine);
-	}
-
-	void removeBirds(Ostrich ostrich) {
-		birdList.remove(ostrich);
-	}
-
-	void removeBirds(Flemingo flemingo) {
-		birdList.remove(flemingo);
-	}
-
-	void removeBirds(Parrot parrot) {
-		birdList.remove(parrot);
+	Bird getBird(String birdId) {
+		for (Bird bird : birdList) {
+			if (bird.birdId.equalsIgnoreCase(birdId)) {
+				return bird;
+			}
+		}
+		return null;
 	}
 }

@@ -4,6 +4,6 @@ public class Penguine extends Bird {
 
 	Penguine() {
 		name = "Peguine";
-		color = "White n Black";
+		color = Color.BLACK_WHITE;
 	}
 }

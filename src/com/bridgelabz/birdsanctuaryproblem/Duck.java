@@ -4,6 +4,6 @@ public class Duck extends Bird {
 
 	Duck() {
 		name = "Duck";
-		color = "White";
+		color = Color.WHITE;
 	}
 }
